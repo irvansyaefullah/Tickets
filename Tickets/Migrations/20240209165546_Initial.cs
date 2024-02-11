@@ -41,7 +41,7 @@ namespace Tickets.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Prducers",
+                name: "Producers",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -52,7 +52,7 @@ namespace Tickets.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Prducers", x => x.Id);
+                    table.PrimaryKey("PK_Producers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -81,9 +81,9 @@ namespace Tickets.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Movies_Prducers_ProducerId",
+                        name: "FK_Movies_Producers_ProducerId",
                         column: x => x.ProducerId,
-                        principalTable: "Prducers",
+                        principalTable: "Producers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -144,7 +144,7 @@ namespace Tickets.Migrations
                 name: "Cinemas");
 
             migrationBuilder.DropTable(
-                name: "Prducers");
+                name: "Producers");
         }
     }
 }
