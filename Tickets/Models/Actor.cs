@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Tickets.Data.Base;
 
 namespace Tickets.Models
 {
